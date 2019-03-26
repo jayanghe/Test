@@ -1,0 +1,15 @@
+Function ef($array,$key){
+$left=0; $right=$array.Length-1;
+while($left -le $right){
+$mid=($left+$right)/2;
+if($array[$mid] -eq $key){
+ return $mid;
+}
+elseif($array[$mid] -lt $key){
+$left=$mid+1;
+}
+else{
+$right=$mid-1;
+}
+}return $mid;
+}
